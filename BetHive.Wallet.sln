@@ -29,10 +29,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Application.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Domain.UnitTests", "tests\BetHive.Wallet.Domain.UnitTests\BetHive.Wallet.Domain.UnitTests.csproj", "{9AD72171-7EF1-4365-97A6-F255F3AB5707}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apispecs", "apispecs", "{26EC866D-454E-497F-AA58-E952A59CB2CB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "openapi", "openapi", "{26EC866D-454E-497F-AA58-E952A59CB2CB}"
 	ProjectSection(SolutionItems) = preProject
-		openapi.wallets.yaml = openapi.wallets.yaml
+		openapi\openapi.wallets.yaml = openapi\openapi.wallets.yaml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{5362491E-08B5-44D4-A0CC-7C1269EF54DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{094F6606-3187-4E45-B48D-B3AE757E0A1E} = {5362491E-08B5-44D4-A0CC-7C1269EF54DA}
 		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
 		{C3F79483-7F48-4CF8-9EE8-32A58AE02261} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
 		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
@@ -85,6 +88,7 @@ Global
 		{1012453C-995A-4B12-9C98-683B2E9921EB} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
 		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
 		{9AD72171-7EF1-4365-97A6-F255F3AB5707} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
+		{26EC866D-454E-497F-AA58-E952A59CB2CB} = {5362491E-08B5-44D4-A0CC-7C1269EF54DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D7D19B1-0559-4EDB-8530-1535ADA91915}
