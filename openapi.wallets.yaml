@@ -1,0 +1,307 @@
+openapi: 3.0.0
+info:
+  title: Wallet API
+  version: 1.0.0
+  description: API for managing user wallets within a sports betting platform.
+  
+paths:
+  /api/v1/tenants/{tenantId}/wallets:
+    post:
+      summary: Create a new wallet for a user.
+      tags: [Wallets]
+      operationId: createWallet
+      parameters:
+        - name: tenantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWalletRequest'
+      responses:
+        '201':
+          description: Wallet created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflict - Wallet already exists for this user.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    get:
+      summary: Retrieve wallets for a tenant or a specific user.
+      tags: [Wallets]
+      operationId: getWallets
+      parameters:
+        - name: tenantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - name: userId
+          in: query
+          required: false
+          schema:
+            type: string
+            format: uuid
+            example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      responses:
+        '200':
+          description: List of wallets.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Wallet'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+
+  /api/v1/tenants/{tenantId}/wallets/{id}:
+    get:
+      summary: Retrieve a specific wallet by ID.
+      tags: [Wallets]
+      operationId: getWalletById
+      parameters:
+        - name: tenantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      responses:
+        '200':
+          description: Wallet details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Wallet not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+
+  /api/v1/tenants/{tenantId}/wallets/{walletId}/deposits:
+    post:
+      summary: Deposit funds into a wallet.
+      tags: [Wallets]
+      operationId: depositFunds
+      parameters:
+        - name: tenantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - name: walletId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositRequest'
+      responses:
+        '201':
+          description: Deposit successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Wallet not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+
+  /api/v1/tenants/{tenantId}/wallets/{walletId}/withdraws:
+    post:
+      summary: Withdraw funds from a wallet.
+      tags: [Wallets]
+      operationId: withdrawFunds
+      parameters:
+        - name: tenantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - name: walletId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawRequest'
+      responses:
+        '201':
+          description: Withdraw successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Wallet not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+
+components:
+  schemas:
+    CreateWalletRequest:
+      type: object
+      properties:
+        userId:
+          type: string
+          format: uuid
+          example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+
+    DepositRequest:
+      type: object
+      properties:
+        amount:
+          type: number
+          format: float
+          example: 100.0
+
+    WithdrawRequest:
+      type: object
+      properties:
+        token:
+          type: string
+          format: byte
+          example: "QUFBQUFBQVJSbFE="
+        amount:
+          type: number
+          format: float
+          example: 50.0
+    Wallet:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        tenantId:
+          type: integer
+          example: 1
+        userId:
+          type: string
+          format: uuid
+          example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        token:
+          type: string
+          format: byte
+          example: "QUFBQUFBQVJSbFE="
+        balance:
+          type: number
+          format: float
+          example: 150.0
+
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          example: "https://example.com/probs/out-of-credit"
+        title:
+          type: string
+          example: "You do not have enough credit."
+        status:
+          type: integer
+          example: 400
+        detail:
+          type: string
+          example: "Your balance is insufficient for this transaction."
+        instance:
+          type: string
+          example: "/tenants/1/wallets/3fa85f64-5717-4562-b3fc-2c963f66afa6/withdraws"
