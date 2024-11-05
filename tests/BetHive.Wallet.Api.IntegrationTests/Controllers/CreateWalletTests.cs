@@ -1,6 +1,6 @@
 ﻿using BetHive.Wallet.Api.IntegrationTests.Common;
 using BetHive.Wallet.Api.IntegrationTests.Common.WebApplicationFactory;
-using BetHive.Wallet.Application.Wallets.Common;
+using BetHive.Wallet.Contracts.Wallets;
 
 namespace BetHive.Wallet.Api.IntegrationTests.Controllers
 {

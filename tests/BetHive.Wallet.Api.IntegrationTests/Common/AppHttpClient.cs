@@ -1,6 +1,5 @@
 using System.Net;
 
-using BetHive.Wallet.Application.Wallets.Common;
 using BetHive.Wallet.Contracts.Wallets;
 using BetHive.Wallet.Contracts.Wallets.Batch;
 

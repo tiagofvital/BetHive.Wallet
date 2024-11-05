@@ -1,7 +1,7 @@
 ﻿using BetHive.Wallet.Application.Common.Security.Permissions;
 using BetHive.Wallet.Application.Common.Security.Policies;
 using BetHive.Wallet.Application.Common.Security.Request;
-using BetHive.Wallet.Application.Wallets.Common;
+using BetHive.Wallet.Contracts.Wallets;
 
 using ErrorOr;
 

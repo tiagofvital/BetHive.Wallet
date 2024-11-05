@@ -1,5 +1,5 @@
 ﻿using BetHive.Wallet.Application.Common.Interfaces;
-using BetHive.Wallet.Application.Wallets.Common;
+using BetHive.Wallet.Contracts.Wallets;
 using BetHive.Wallet.Domain.Wallets;
 
 using ErrorOr;

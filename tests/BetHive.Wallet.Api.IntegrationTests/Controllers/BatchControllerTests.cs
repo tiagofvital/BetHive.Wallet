@@ -1,9 +1,8 @@
 ﻿using System.Net;
-using System.Net.Http;
 
 using BetHive.Wallet.Api.IntegrationTests.Common;
 using BetHive.Wallet.Api.IntegrationTests.Common.WebApplicationFactory;
-using BetHive.Wallet.Application.Wallets.Common;
+using BetHive.Wallet.Contracts.Wallets;
 using BetHive.Wallet.Contracts.Wallets.Batch;
 
 namespace BetHive.Wallet.Api.IntegrationTests.Controllers
