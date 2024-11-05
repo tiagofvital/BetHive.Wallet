@@ -6,14 +6,14 @@ services:
       dockerfile: Dockerfile
       target: final
     depends_on:
-      - ms-sql-server
+      - behive-wallet-db
     ports:
         - "8888:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
     restart: on-failure
-  ms-sql-server:
+  behive-wallet-db:
     image: "mcr.microsoft.com/mssql/server"
     environment:
         SA_PASSWORD: "BetHive2024!"
