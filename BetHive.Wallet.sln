@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{094F6606-3187-4E45-B48D-B3AE757E0A1E}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Api", "src\BetHive.Wallet.Api\BetHive.Wallet.Api.csproj", "{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Application", "src\BetHive.Wallet.Application\BetHive.Wallet.Application.csproj", "{C3F79483-7F48-4CF8-9EE8-32A58AE02261}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Contracts", "src\BetHive.Wallet.Contracts\BetHive.Wallet.Contracts.csproj", "{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Domain", "src\BetHive.Wallet.Domain\BetHive.Wallet.Domain.csproj", "{B5E28652-F2B1-4AFE-9CCE-5AB46368289C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Infrastructure", "src\BetHive.Wallet.Infrastructure\BetHive.Wallet.Infrastructure.csproj", "{296A271F-F1DE-415F-804A-50DC7D9D9F75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Api.IntegrationTests", "tests\BetHive.Wallet.Api.IntegrationTests\BetHive.Wallet.Api.IntegrationTests.csproj", "{1012453C-995A-4B12-9C98-683B2E9921EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Application.UnitTests", "tests\BetHive.Wallet.Application.UnitTests\BetHive.Wallet.Application.UnitTests.csproj", "{18220CDC-EEA8-4B34-80E7-4AAD6868ED02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetHive.Wallet.Domain.UnitTests", "tests\BetHive.Wallet.Domain.UnitTests\BetHive.Wallet.Domain.UnitTests.csproj", "{9AD72171-7EF1-4365-97A6-F255F3AB5707}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F79483-7F48-4CF8-9EE8-32A58AE02261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F79483-7F48-4CF8-9EE8-32A58AE02261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F79483-7F48-4CF8-9EE8-32A58AE02261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F79483-7F48-4CF8-9EE8-32A58AE02261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E28652-F2B1-4AFE-9CCE-5AB46368289C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E28652-F2B1-4AFE-9CCE-5AB46368289C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E28652-F2B1-4AFE-9CCE-5AB46368289C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E28652-F2B1-4AFE-9CCE-5AB46368289C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296A271F-F1DE-415F-804A-50DC7D9D9F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296A271F-F1DE-415F-804A-50DC7D9D9F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296A271F-F1DE-415F-804A-50DC7D9D9F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296A271F-F1DE-415F-804A-50DC7D9D9F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1012453C-995A-4B12-9C98-683B2E9921EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1012453C-995A-4B12-9C98-683B2E9921EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1012453C-995A-4B12-9C98-683B2E9921EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1012453C-995A-4B12-9C98-683B2E9921EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AD72171-7EF1-4365-97A6-F255F3AB5707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD72171-7EF1-4365-97A6-F255F3AB5707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD72171-7EF1-4365-97A6-F255F3AB5707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD72171-7EF1-4365-97A6-F255F3AB5707}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D5E44EE-98D6-4624-B8EF-EFB7AAA763B8} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
+		{C3F79483-7F48-4CF8-9EE8-32A58AE02261} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
+		{E9CCA046-1A96-42F6-A41F-0DD5FEC0AF4C} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
+		{B5E28652-F2B1-4AFE-9CCE-5AB46368289C} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
+		{296A271F-F1DE-415F-804A-50DC7D9D9F75} = {17DEC6DF-3AEF-4B84-937D-B5DAB7AFC3DD}
+		{1012453C-995A-4B12-9C98-683B2E9921EB} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
+		{18220CDC-EEA8-4B34-80E7-4AAD6868ED02} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
+		{9AD72171-7EF1-4365-97A6-F255F3AB5707} = {BEAD2DB1-3B50-4D45-ADA5-14022FC28B3E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D7D19B1-0559-4EDB-8530-1535ADA91915}
+	EndGlobalSection
+EndGlobal

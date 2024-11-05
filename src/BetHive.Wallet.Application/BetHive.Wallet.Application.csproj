@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BetHive.Wallet.Contracts\BetHive.Wallet.Contracts.csproj" />
+    <ProjectReference Include="..\BetHive.Wallet.Domain\BetHive.Wallet.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="Mapster" />
+    <PackageReference Include="Mapster.DependencyInjection" />
+    <PackageReference Include="Polly" />
+  </ItemGroup>
+
+</Project>

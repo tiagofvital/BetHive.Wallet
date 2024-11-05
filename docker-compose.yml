@@ -1,0 +1,21 @@
+services:
+  api:
+    container_name: BetHive-wallet-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final
+    depends_on:
+      - ms-sql-server
+    ports:
+        - "8888:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:80
+    restart: on-failure
+  ms-sql-server:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: "BetHive2024!"
+        ACCEPT_EULA: "Y"
+    restart: always    
