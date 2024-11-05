@@ -23,8 +23,8 @@ namespace BetHive.Wallet.Api.Controllers
 
             return result.Match(
                 wallet => CreatedAtAction(
-                    actionName: nameof(Get),
-                    routeValues: new { wallet.TenantId, wallet.UserId },
+                    actionName: nameof(GetById),
+                    routeValues: new { wallet.TenantId, wallet.Id },
                     value: wallet),
                 Problem);
         }
