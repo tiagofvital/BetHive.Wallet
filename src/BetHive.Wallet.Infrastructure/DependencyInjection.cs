@@ -42,12 +42,6 @@ namespace BetHive.Wallet.Infrastructure
 
         private static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var sp = services.BuildServiceProvider();
-
-            var logger = sp.GetRequiredService<ILogger<BatchMovementBackgroundService>>();
-
-            logger.LogInformation(configuration.GetConnectionString("DefaultConnection"));
-
             services.AddDbContext<AppDbContext>(opts =>
                 opts.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection"),
