@@ -18,6 +18,8 @@ This service provides RESTful APIs to support wallet management operations:
 2. **Managing Funds**: APIs to deposit into or withdraw from the wallet, with checks to prevent negative balances.
 3. **Batch Processing**: For operations involving multiple users, batch transactions are supported, allowing deposits or withdrawals for several users in a single request.
 
+ [View OpenAPI Sample for Wallet Creation and Funds Management](./openapi/openapi.wallets.yaml)
+
 ---
 
 - [Getting Started 🏃](#getting-started-)
